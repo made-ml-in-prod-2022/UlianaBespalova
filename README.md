@@ -1,4 +1,81 @@
 # ДЗ1
+## Беспалова Ульяна, Технопарк, ML-21
+
+**Датасет:**
+
+https://www.kaggle.com/datasets/cherngs/heart-disease-cleveland-uci
+
+
+**Установка зависимостей:**
+~~~
+pip install -r requirements.txt
+pip install -e .
+~~~
+
+**Обучение модели:**
+~~~
+python ml_project/train_test_pipeline.py  --mode=fit --config=[путь к конфигу]
+~~~
+
+**Предикт с помощью модели:**
+~~~
+python ml_project/train_test_pipeline.py  --mode=predict --config=[путь к конфигу]
+~~~
+
+**Тесты:**
+~~~
+python ml_project/tests/test_full_train_fit_pipeline.py
+
+python ml_project/tests/data/test_get_dataset.py
+python ml_project/tests/features/test_transformer.py
+python ml_project/tests/models/test_train_model.py
+~~~
+
+
+
+Архитектура проекта
+==============================
+
+    ├── LICENSE
+    ├── Makefile           
+    ├── README.md          
+    ├── data               <- Папка c результатами выполнения скрипта
+    │
+    ├── notebooks          <- Ноутбук с разведочным анализом данных
+    │
+    ├── configs            <- Конфиги с параметрами моделей
+    │
+    ├── requirements.txt   <- Файл с зависимостями
+    │
+    ├── ml_project         <- Исходный код проекта
+    │   ├── __init__.py    
+    │   │
+    │   ├── data           <- Скрипт для загрузки и разделения данных
+    │   │   └── get_data.py
+    │   │
+    │   ├── features       <- Трансформер для обработки датасета
+    │   │   └── build_features.py
+    │   │
+    │   ├── models         <- Скрипт для работы с моделью
+    │   │   └── model_fit_predict.py
+    │   │
+    │   ├── enities        <- Параметры модели  датасета в формате DataClass
+    │   │   ├── features_params.py
+    │   │   ├── model_params.py
+    │   │   └── split_params.py
+    │   │
+    │   └── tests          <- Юнит тесты отдельных модулей и тест пайплайна для обучения модели
+    │
+    └── setup.py            
+
+
+--------
+
+<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+
+
+### Задание
+
 
 Вам потребуется сделать "production ready" проект для решения задачи классификации, то есть написать код для обучения и предикта, покрыть его тестами и тд
 
