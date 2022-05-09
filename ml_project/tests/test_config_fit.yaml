@@ -1,0 +1,32 @@
+data:
+  data_path: "test_data.csv"
+  splitting_params:
+    val_size: 0.2
+    random_state: 42
+
+features:
+  categorical_features:
+    - "ca"
+    - "cp"
+    - "exang"
+    - "fbs"
+    - "sex"
+    - "restecg"
+    - "slope"
+    - "thal"
+  numerical_features:
+    - "age"
+    - "chol"
+    - "oldpeak"
+    - "thalach"
+    - "trestbps"
+  target: "condition"
+
+model:
+  save_path: "model.pkl"
+  metric_path: "metrics.json"
+  model: "RandomForest"
+  forest_params:
+    n_estimators: 500
+    max_depth: 10
+    random_state: 42
