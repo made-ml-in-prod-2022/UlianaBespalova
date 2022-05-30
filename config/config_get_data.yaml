@@ -1,0 +1,7 @@
+downloading_params:
+  endpoint_url: "https://ib.bizmrg.com"
+  path: "heart_cleveland_upload.csv"
+  pk: "r3NQGAzctTMwnxyN7SCLmV"
+  sk: "hzV7YbiKYVwDzSyTZe2eMjWZuuA9GaGysX6kG3ntAJmS"
+  output_folder: "data/"
+  s3_bucket: "fir_backet"

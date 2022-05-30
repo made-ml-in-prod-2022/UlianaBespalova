@@ -1,0 +1,31 @@
+data:
+  data_path: "data/heart_cleveland_upload.csv"
+  splitting_params:
+    val_size: 0.2
+    random_state: 42
+
+features:
+  categorical_features:
+    - "ca"
+    - "cp"
+    - "exang"
+    - "fbs"
+    - "sex"
+    - "restecg"
+    - "slope"
+    - "thal"
+  numerical_features:
+    - "age"
+    - "chol"
+    - "oldpeak"
+    - "thalach"
+    - "trestbps"
+  target: "condition"
+
+model:
+  save_path: "models/model.pkl"
+  metric_path: "models/metrics.json"
+  model: "LogReg"
+  logreg_params:
+    max_iter: 800
+    random_state: 42
