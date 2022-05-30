@@ -1,0 +1,3 @@
+model: "model.pkl"
+data_path: "test_data.csv"
+results_path: "res.csv"
